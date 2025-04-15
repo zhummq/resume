@@ -212,16 +212,16 @@
 	\vspace{-1em}
     \begin{table}[h!]
         \begin{tabularx}{\textwidth}{XXp{\widthof{2023年9月 -- 2027年6月}}}
-            郑州大学  & 软件工程 & 2023年9月 -- 2027年6月\\
+            郑州大学  & 软件工程（本科） & 2023年9月 -- 2027年6月\\
             % 这里哪个高就加粗哪个，哪个不想放就留白 =w= 比如你综测高GPA低，你就只放综测和综测排名就好。
         \end{tabularx}
     \end{table}
  \section{\makebox[\widthof{\faWrench}][c]{\color{NPU_Blue}{\faWrench}}\quad 技能特长}
     \vspace{0.3em}
     \begin{itemize}
-
-        \item 熟悉Windows与Linux端开发。
-       
+    \item 熟练使用 Java，go 语言
+    \item 熟悉 Java内存模型，深入了解 ThreadLoacl底层原理。
+    \item 了解 select,poll epoll 多路复用底层原理。
     \end{itemize}
     % 项目经历（找导师一般都看中这个），可以改成“科研经历”
         % \faGears 这是齿轮，适合机械类，我电信的也喜欢齿轮，就用这个了
@@ -233,7 +233,7 @@
     % 小技巧，老师想看的重点加粗，比如商科类的一般更想看到数字，工科类的更想看到技术
     \subsection{Mit 5840项目\hfill }
     
-    \textbf{第一负责人} \hfill 2025年3月-2025年6月
+   \hfill 2025年3月-2025年6月
     \begin{itemize}
         \item 实现论文 MapReduce，使用\textbf{临时文件加重命名}保证写入文件的原子性
         \item 实现 raft 算法的中的 \textbf{leader 选举，日志复制，持久化，快照}等，同时使用 \textbf{二分法} 优化日志回退，减少日志回退时间。
@@ -245,12 +245,12 @@
     \vspace{1em}                % 这是换行用的
     \subsection{Bt和Http多线程下载器 \hfill }
 
-    \textbf{学生独作} \hfill 2024年12月-2025年1月
+      \textbf{\href{https://github.com/zhummq/goDownLoad}{项目Github地址}}\hfill 2024年12月-2025年1月
     \begin{itemize}
-        \item 完成 torrent 文件的解析,和与其它 peer 的通信流程
-        \item 使用 \textbf{mannger-worker} 同时与多个 peer 通信，完成多线程下载
-        \item 借助\textbf{断点续传协议}，实现 Http 的多线程下载
-        \item 使用 \textbf{Mmap} 直接映射文件到内存，减少 write 系统调用，显著提高写入时间。
+        \item 完成 torrent 文件的解析,和与其它 peer 的通信流程。
+        \item 使用 \textbf{mannger-worker} 并发的与多个 peer 通信，完成多线程下载。
+        \item 借助\textbf{断点续传协议}，并发发送请求，实现 Http 的多线程下载
+        \item 使用 \textbf{Mmap} 直接映射文件到内存，减少 write 系统调用，显著减少写入磁盘的时间。
     \end{itemize}
     %\textbf{（标题与内容由GPT乱编的，现实中应该没有这论文吧。。大概。）}\textbf{独自进行前期研究，实验验证和论文写作}。重点探索了将\textbf{多模态医学影像}（如MRI和CT）与\textbf{自然语言模型}相结合的方法，以提高脑肿瘤检测的准确性。成功将对比学习和Prompt Fine-Tuning技术应用于医学影像分析中，将模型在脑肿瘤检测任务中的性能提升到了\textbf{超越SOTA的水平}，特别是在 one-shot 场景下取得了显著的改进。
 
@@ -258,7 +258,7 @@
     \section{\makebox[\widthof{\faInfo}][c]{\color{NPU_Blue}{\faInfo}}\quad 其他}
     \begin{itemize}
         \item 技术博客（嗯嗯好傅）: \textbf{\href{https://blog.csdn.net/2301_81836829?spm=1010.2135.3001.5421}{CSDN}， \href{https://www.cnblogs.com/eehaofu}{博客园}}
-        \item 最喜欢蒋炎岩老师的一句话 \textbf{计算机的世界没有魔法}
+        \item 喜欢深入探索技术底层的原理，最喜欢蒋炎岩老师的一句话 \textbf{计算机的世界没有魔法}
     \end{itemize}
 
 \end{document}
