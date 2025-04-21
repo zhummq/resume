@@ -189,7 +189,7 @@
             \section{\makebox[\widthof{\faUser}][c]{\color{NPU_Blue}{\faUser}}\quad 个人信息}
             \begin{tabularx}{\linewidth}{p{\widthof{出生日期:}}Xp{\widthof{政治面貌:}}X}
                 姓名: & 朱庆森 & 性别: & 男 \\
-                出生日期: & 2006年10月08日 & 政治面貌: & 共青团员 \\
+                年龄: & 19岁 & 政治面貌: & 共青团员 \\
                     
                 %% 想多加几行的话，就按上面的格式自行补充
                 %% 想加粗的话\textbf{}
@@ -219,10 +219,10 @@
  \section{\makebox[\widthof{\faWrench}][c]{\color{NPU_Blue}{\faWrench}}\quad 技能特长}
     \vspace{0.3em}
     \begin{itemize}
-    \item 熟练使用 Java，go 语言
+    \item 熟练使用 Java，go 语言，熟悉 Java内存模型，深入了解 ThreadLoacl底层原理。
     \item 阅读过 redis 低版本源码，熟悉 redis 基本架构，底层数据结构，如事件执行流程，渐进式hash，dict，zipList，quickList，skipList等
-    \item 熟悉 Java内存模型，深入了解 ThreadLoacl底层原理。
     \item 了解 select,poll epoll 多路复用底层原理。
+    \item 熟悉 计算机系统，计算机网络，数据结构的相关知识。
     \end{itemize}
     % 项目经历（找导师一般都看中这个），可以改成“科研经历”
         % \faGears 这是齿轮，适合机械类，我电信的也喜欢齿轮，就用这个了
@@ -236,9 +236,9 @@
     
    \hfill 2025年3月-2025年6月
     \begin{itemize}
-        \item 实现论文 MapReduce，使用\textbf{临时文件加重命名}保证写入文件的原子性
+        \item 基于论文MapReduce设计分布式计算框架，通过临时文件+原子重命名保障任务执行的一致性，支持容错与动态扩缩容。  
         \item 实现 raft 算法的中的 \textbf{leader 选举，日志复制，持久化，快照}等，同时使用 \textbf{二分法} 优化日志回退，减少日志回退时间。
-        \item 使用 raft 作为底层保证各个状态机的同步，使用 \textbf{全局唯一ID} 保证执行指令的线性一致。
+        \item 基于Raft构建线性一致状态机，通过\textbf{全局唯一ID(雪花算法)}保障指令有序执行。
     \end{itemize}
     %主要负责药物的\textbf{前期研发，中期亲自试药和后期的投毒计划部署}与主要执行人员。成功将著名侦探\textbf{工藤新一}变成小孩摸样。药物的研发成功让\textbf{150万人}收益，最终盈利\textbf{3000万元}。
     
@@ -248,10 +248,10 @@
 
       \textbf{\href{https://github.com/zhummq/goDownLoad}{项目Github地址}}\hfill 2024年12月-2025年1月
     \begin{itemize}
-        \item 完成 torrent 文件的解析,和与其它 peer 的通信流程。
-        \item 使用 \textbf{mannger-worker} 并发的与多个 peer 通信，完成多线程下载。
-        \item 借助\textbf{断点续传协议}，并发发送请求，实现 Http 的多线程下载
-        \item 使用 \textbf{Mmap} 直接映射文件到内存，减少 write 系统调用，显著减少写入磁盘的时间。
+        \item 基于Bencode编码解析.torrent文件，提取Tracker地址、Piece分块（SHA1校验）、文件目录结构等元信息, 实现BitTorrent协议握手流程。
+        \item 基于\textbf{channel}实现生产者消费者模型，并发下载内容。
+        \item 基于\textbf{Range}实现断点续传，支持并发请求，实现 Http 的多线程下载
+        \item 使用\textbf{mmap}内存映射技术，将文件直接映射至用户空间，绕过内核缓冲区（Page Cache），减少write()系统调用次数
     \end{itemize}
     %\textbf{（标题与内容由GPT乱编的，现实中应该没有这论文吧。。大概。）}\textbf{独自进行前期研究，实验验证和论文写作}。重点探索了将\textbf{多模态医学影像}（如MRI和CT）与\textbf{自然语言模型}相结合的方法，以提高脑肿瘤检测的准确性。成功将对比学习和Prompt Fine-Tuning技术应用于医学影像分析中，将模型在脑肿瘤检测任务中的性能提升到了\textbf{超越SOTA的水平}，特别是在 one-shot 场景下取得了显著的改进。
 
@@ -259,7 +259,7 @@
     \section{\makebox[\widthof{\faInfo}][c]{\color{NPU_Blue}{\faInfo}}\quad 其他}
     \begin{itemize}
         \item 技术博客（嗯嗯好傅）: \textbf{\href{https://blog.csdn.net/2301_81836829?spm=1010.2135.3001.5421}{CSDN}， \href{https://www.cnblogs.com/eehaofu}{博客园}}
-        \item 喜欢深入探索技术底层的原理，最喜欢蒋炎岩老师的一句话 \textbf{计算机的世界没有魔法}
+       % \item 喜欢深入探索技术底层的原理，最喜欢蒋炎岩老师的一句话 \textbf{计算机的世界没有魔法}
     \end{itemize}
 
 \end{document}
